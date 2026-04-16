@@ -1,12 +1,15 @@
 import { motion } from "framer-motion";
-import { Smartphone, Tv, Speaker, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { WHATSAPP_URL } from "@/lib/constants";
+import premioIphone from "@/assets/premio-iphone.jpg";
+import premioTv from "@/assets/premio-tv.jpg";
+import premioCaixaSom from "@/assets/premio-caixa-som.jpg";
 
 const main = [
-  { place: "1º", prize: "iPhone", Icon: Smartphone },
-  { place: "2º", prize: 'SmartTV 50"', Icon: Tv },
-  { place: "3º", prize: "Caixa de Som Amplificada", Icon: Speaker },
+  { place: "1º", prize: "iPhone", img: premioIphone, alt: "iPhone preto — 1º prêmio da ação entre amigos" },
+  { place: "2º", prize: 'SmartTV 50"', img: premioTv, alt: 'SmartTV 50" — 2º prêmio da ação entre amigos' },
+  { place: "3º", prize: "Caixa de Som Amplificada", img: premioCaixaSom, alt: "Caixa de som amplificada Pulse — 3º prêmio da ação entre amigos" },
 ];
 
 const extras = [
@@ -31,7 +34,7 @@ export function Prizes() {
             transition={{ duration: 0.6 }}
             className="text-xs uppercase tracking-[0.25em] text-primary"
           >
-            Rifa solidária 2026
+            Ação entre amigos
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 16 }}
@@ -53,19 +56,29 @@ export function Prizes() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
-              className="group relative overflow-hidden rounded-2xl bg-card p-8 shadow-soft ring-1 ring-border/60 transition-all hover:-translate-y-1 hover:shadow-elegant"
+              className="group relative overflow-hidden rounded-2xl bg-card shadow-soft ring-1 ring-border/60 transition-all hover:-translate-y-1 hover:shadow-elegant"
             >
-              <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-accent/15 blur-2xl transition-opacity group-hover:opacity-150" />
-              <div className="relative">
-                <span className="font-display text-5xl text-primary md:text-6xl">{item.place}</span>
-                <div className="mt-6 flex items-center gap-3">
-                  <item.Icon className="h-6 w-6 text-foreground/70" strokeWidth={1.5} />
-                  <span className="text-xl">{item.prize}</span>
-                </div>
+              <div className="relative aspect-[4/3] overflow-hidden bg-secondary/60">
+                <img
+                  src={item.img}
+                  alt={item.alt}
+                  loading="lazy"
+                  className="h-full w-full object-contain p-6 transition-transform duration-[1200ms] group-hover:scale-105"
+                />
+                <span className="absolute left-4 top-4 rounded-full bg-background/90 px-3 py-1 font-display text-sm text-primary shadow-soft backdrop-blur">
+                  {item.place} prêmio
+                </span>
+              </div>
+              <div className="p-6">
+                <span className="text-xl">{item.prize}</span>
               </div>
             </motion.div>
           ))}
         </div>
+
+        <p className="mt-6 text-xs text-muted-foreground">
+          Imagens meramente ilustrativas. Modelos sujeitos à disponibilidade.
+        </p>
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -94,7 +107,7 @@ export function Prizes() {
             </p>
             <Button asChild size="lg" className="rounded-full shadow-elegant">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                Quero meu bilhete
+                Fale conosco
               </a>
             </Button>
           </div>
