@@ -138,102 +138,118 @@ function Index() {
       </section>
 
       {/* EXPERIÊNCIA */}
-      <section className="bg-secondary/40 px-6 py-24 md:px-10 md:py-32">
+      <section className="relative bg-secondary/40 px-6 py-24 md:px-10 md:py-32">
         <div className="mx-auto max-w-6xl">
-          <div className="mb-16 max-w-2xl">
-            <motion.span {...fadeUp} className="text-xs uppercase tracking-[0.25em] text-primary">
-              A noite
-            </motion.span>
-            <motion.h2 {...fadeUp} className="mt-5 text-3xl md:text-5xl">
-              Feche os olhos.{" "}
-              <span className="text-muted-foreground">Você já consegue sentir.</span>
-            </motion.h2>
-            <motion.p
+          {/* Abertura editorial */}
+          <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+            <motion.div {...fadeUp} className="lg:col-span-5">
+              <span className="text-xs uppercase tracking-[0.25em] text-primary">
+                A noite
+              </span>
+              <h2 className="mt-5 font-display text-4xl leading-[1.05] md:text-6xl">
+                Não dá pra<br />
+                <em className="not-italic text-primary">explicar.</em>
+                <br />
+                Só vivendo.
+              </h2>
+            </motion.div>
+
+            <motion.div
               {...fadeUp}
-              className="mt-6 max-w-xl text-lg text-muted-foreground"
+              className="space-y-6 text-lg leading-relaxed text-muted-foreground md:text-xl lg:col-span-7 lg:pt-4"
             >
-              Antes de te contar o que acontece, deixa a gente te levar até lá.
-            </motion.p>
+              <p>
+                Tem um momento, lá pelas dez da noite, em que a sanfona puxa um
+                xote e <span className="text-foreground">você percebe que está dançando com gente que acabou de conhecer</span> — e que, no fim das contas, parece amigo de infância.
+              </p>
+              <p>
+                É isso que a gente não consegue colocar no cartaz. A festa é
+                feita de pequenas coisas que acontecem ao mesmo tempo, e que só
+                fazem sentido juntas.
+              </p>
+            </motion.div>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="group relative overflow-hidden rounded-3xl shadow-elegant lg:col-span-7 lg:row-span-2"
-            >
-              <div className="aspect-[4/3] overflow-hidden lg:aspect-auto lg:h-full">
-                <img
-                  src={musicaImg}
-                  alt="Casal dançando forró sob luzes amarelas durante o Arraiá da Ilha"
-                  loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
-                />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/30 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-8 text-background md:p-10">
-                <span className="text-xs uppercase tracking-[0.25em] text-background/70">
-                  Quando a sanfona começa
-                </span>
-                <h3 className="mt-3 font-display text-3xl leading-tight md:text-4xl">
-                  Os pés se movem antes da cabeça pensar.
-                </h3>
-                <p className="mt-4 max-w-md text-base text-background/85 md:text-lg">
-                  Forró pé de serra, samba de raiz e DJ até o fim. Ninguém fica sentado por muito tempo — e ninguém quer ficar.
-                </p>
-              </div>
-            </motion.div>
+          {/* Imagem imersiva com momentos sobrepostos */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            className="relative mt-20 overflow-hidden rounded-[2rem] shadow-elegant"
+          >
+            <img
+              src={musicaImg}
+              alt="Quadrilha rodopiando sob luzes amarelas e bandeirinhas no Arraiá da Ilha"
+              loading="lazy"
+              className="h-[70vh] min-h-[520px] w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/60 to-foreground/10" />
+            <div className="absolute inset-x-0 bottom-0 p-8 text-background md:p-14">
+              <p className="max-w-2xl font-display text-2xl leading-[1.2] text-background md:text-4xl">
+                "Acho que faz três horas que a gente tá aqui. Não parece."
+              </p>
+              <p className="mt-3 text-sm text-background/70 md:text-base">
+                — frase mais ouvida no Arraiá de 2025
+              </p>
+            </div>
+          </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="group relative overflow-hidden rounded-3xl bg-card p-8 shadow-soft ring-1 ring-border/60 transition-all hover:-translate-y-1 hover:shadow-elegant lg:col-span-5"
-            >
-              <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-accent/20 blur-3xl" />
-              <div className="relative">
-                <span className="text-xs uppercase tracking-[0.25em] text-primary">
-                  No ar
-                </span>
-                <h3 className="mt-3 font-display text-2xl leading-tight md:text-3xl">
-                  Cheiro de milho na fogueira, riso de criança ao longe.
+          {/* Momentos como linha do tempo */}
+          <div className="mt-24 grid gap-x-12 gap-y-16 md:grid-cols-2 lg:gap-x-20">
+            {[
+              {
+                hora: "19h30",
+                titulo: "O cheiro chega antes da gente.",
+                texto:
+                  "Milho assando, canela no quentão, alho dourando na barraca do pastel. Você ainda nem entrou direito e já está com fome.",
+              },
+              {
+                hora: "21h00",
+                titulo: "As crianças somem — e tá tudo bem.",
+                texto:
+                  "Pescaria, quadrilha mirim, pintura de rosto. Elas voltam suadas, com algodão doce no cabelo, perguntando se podem ficar mais um pouquinho.",
+              },
+              {
+                hora: "22h15",
+                titulo: "Alguém grita: 'Anarriê!'",
+                texto:
+                  "E de repente todo mundo vira par de alguém. Quem disse que não sabia dançar, dança. Quem jurou que ia só assistir, está no meio da roda.",
+              },
+              {
+                hora: "00h40",
+                titulo: "Ninguém quer ir embora.",
+                texto:
+                  "A fogueira virou brasa, o DJ emendou um samba, e tem gente combinando de se encontrar de novo no ano que vem. Sempre tem.",
+              },
+            ].map((m, i) => (
+              <motion.div
+                key={m.hora}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.7, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                className="border-l border-primary/30 pl-6"
+              >
+                <div className="font-display text-sm tracking-[0.3em] text-primary">
+                  {m.hora}
+                </div>
+                <h3 className="mt-3 font-display text-2xl leading-tight text-foreground md:text-3xl">
+                  {m.titulo}
                 </h3>
-                <p className="mt-4 text-base text-muted-foreground">
-                  Pamonha quentinha, quentão na caneca, paçoca derretendo na boca. A memória de infância de toda família brasileira, servida em mesa comprida.
+                <p className="mt-3 text-base leading-relaxed text-muted-foreground md:text-lg">
+                  {m.texto}
                 </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-              className="group relative overflow-hidden rounded-3xl bg-card p-8 shadow-soft ring-1 ring-border/60 transition-all hover:-translate-y-1 hover:shadow-elegant lg:col-span-5"
-            >
-              <div className="absolute -left-10 -bottom-10 h-32 w-32 rounded-full bg-primary/15 blur-3xl" />
-              <div className="relative">
-                <span className="text-xs uppercase tracking-[0.25em] text-primary">
-                  Para os pequenos
-                </span>
-                <h3 className="mt-3 font-display text-2xl leading-tight md:text-3xl">
-                  Quadrilha, pescaria e olhinhos brilhando.
-                </h3>
-                <p className="mt-4 text-base text-muted-foreground">
-                  Espaço kids cuidado para os pais relaxarem. As crianças voltam para casa cansadas, felizes — e querendo voltar no ano que vem.
-                </p>
-              </div>
-            </motion.div>
+              </motion.div>
+            ))}
           </div>
 
           <motion.p
             {...fadeUp}
-            className="mx-auto mt-16 max-w-2xl text-center text-lg italic text-muted-foreground md:text-xl"
+            className="mx-auto mt-24 max-w-3xl text-center font-display text-2xl leading-tight text-foreground md:text-3xl"
           >
-            "No fim da noite, ninguém quer ir embora. E é justamente por isso que vale tanto a pena estar lá."
+            E o melhor: cada gole, cada prato, cada rifa{" "}
+            <span className="text-primary">vira ajuda real</span> pra alguém que precisa.
           </motion.p>
         </div>
       </section>
