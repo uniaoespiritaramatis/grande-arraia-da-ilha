@@ -278,6 +278,53 @@ function Index() {
         </div>
       </section>
 
+      {/* GALERIA — Edição 2025 em fotos */}
+      <section className="px-6 py-24 md:px-10 md:py-32">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div className="max-w-xl">
+              <motion.span {...fadeUp} className="text-xs uppercase tracking-[0.25em] text-primary">
+                Edição 2025 · Em fotos
+              </motion.span>
+              <motion.h2 {...fadeUp} className="mt-5 text-3xl md:text-5xl">
+                Não acredita?{" "}
+                <span className="text-muted-foreground">Olha aí.</span>
+              </motion.h2>
+            </div>
+            <motion.p {...fadeUp} className="max-w-sm text-base text-muted-foreground md:text-right">
+              Fotos reais da última edição. Sem filtro, sem montagem — só gente feliz.
+            </motion.p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
+            {[
+              { src: eventoCantor, alt: "Músico cantando ao vivo no palco do Arraiá", span: "col-span-2 row-span-2 aspect-square" },
+              { src: eventoDanca2, alt: "Dançarino animando o público no Arraiá", span: "aspect-square" },
+              { src: eventoSalao, alt: "Vista ampla do salão da Portuguesa lotado", span: "aspect-square" },
+              { src: eventoDanca1, alt: "Apresentação de dança junina no Arraiá", span: "aspect-square" },
+              { src: eventoQuadrilha, alt: "Equipe organizadora dançando junto", span: "aspect-square" },
+            ].map((p, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.96 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.7, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}
+                className={`group relative overflow-hidden rounded-2xl shadow-soft ${p.span}`}
+              >
+                <img
+                  src={p.src}
+                  alt={p.alt}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* RESERVA */}
       <section className="px-6 py-24 md:px-10 md:py-32">
         <motion.div
