@@ -46,7 +46,7 @@ function Index() {
             className="flex items-center justify-between"
           >
             <div className="font-display text-lg text-background/90 tracking-wide">
-              Arraiá <span className="opacity-70">·</span> da Ilha
+              Grande Arraiá da Ilha
             </div>
             <a
               href={WHATSAPP_URL}
@@ -60,22 +60,14 @@ function Index() {
 
           <div className="flex flex-1 items-center">
             <div className="max-w-3xl">
-              <motion.span
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="inline-block rounded-full border border-background/30 bg-background/10 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-background/90 backdrop-blur"
-              >
-                Edição 2025 · Beneficente
-              </motion.span>
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="mt-6 text-4xl leading-[1.05] text-background sm:text-5xl md:text-6xl lg:text-7xl"
               >
-                O maior arraiá beneficente da{" "}
-                <em className="not-italic text-accent">Ilha do Governador</em>
+                O MAIOR ARRAIÁ BENEFICENTE DA{" "}
+                <em className="not-italic text-accent">ILHA DO GOVERNADOR</em>
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
