@@ -77,9 +77,7 @@ function Index() {
               >
                 Tradição, alegria e solidariedade em uma experiência única.
                 <br /><br />
-                <span className="text-background">06 de junho de 2026 na Portuguesa da Ilha</span>
-                <br />
-                <span className="text-background">(Associação Atlética Portuguesa).</span>
+                <span className="text-background">6 de junho de 2026 na Associação Atlética Portuguesa.</span>
               </motion.p>
               <div className="mt-8">
                 <Countdown />
@@ -144,44 +142,99 @@ function Index() {
         <div className="mx-auto max-w-6xl">
           <div className="mb-16 max-w-2xl">
             <motion.span {...fadeUp} className="text-xs uppercase tracking-[0.25em] text-primary">
-              A experiência
+              A noite
             </motion.span>
             <motion.h2 {...fadeUp} className="mt-5 text-3xl md:text-5xl">
-              Uma noite que reúne o melhor do Brasil.
+              Feche os olhos.{" "}
+              <span className="text-muted-foreground">Você já consegue sentir.</span>
             </motion.h2>
+            <motion.p
+              {...fadeUp}
+              className="mt-6 max-w-xl text-lg text-muted-foreground"
+            >
+              Antes de te contar o que acontece, deixa a gente te levar até lá.
+            </motion.p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {[
-              { title: "Comidas típicas", desc: "Sabores artesanais que aquecem a memória.", img: comidasImg, icon: "🌽" },
-              { title: "Música ao vivo", desc: "Forró, sanfona e a alma do São João.", img: musicaImg, icon: "🎶" },
-              { title: "Espaço família", desc: "Um ambiente acolhedor para todas as idades.", img: heroImg, icon: "👨‍👩‍👧" },
-              { title: "Brincadeiras", desc: "Atrações tradicionais que encantam.", img: rifaImg, icon: "🎯" },
-            ].map((item, i) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                className="group overflow-hidden rounded-2xl bg-card shadow-soft ring-1 ring-border/60 transition-all hover:-translate-y-1 hover:shadow-elegant"
-              >
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
-                    src={item.img}
-                    alt={item.title}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="mb-2 text-2xl">{item.icon}</div>
-                  <h3 className="text-xl">{item.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{item.desc}</p>
-                </div>
-              </motion.div>
-            ))}
+          <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="group relative overflow-hidden rounded-3xl shadow-elegant lg:col-span-7 lg:row-span-2"
+            >
+              <div className="aspect-[4/3] overflow-hidden lg:aspect-auto lg:h-full">
+                <img
+                  src={musicaImg}
+                  alt="Casal dançando forró sob luzes amarelas durante o Arraiá da Ilha"
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/30 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-8 text-background md:p-10">
+                <span className="text-xs uppercase tracking-[0.25em] text-background/70">
+                  Quando a sanfona começa
+                </span>
+                <h3 className="mt-3 font-display text-3xl leading-tight md:text-4xl">
+                  Os pés se movem antes da cabeça pensar.
+                </h3>
+                <p className="mt-4 max-w-md text-base text-background/85 md:text-lg">
+                  Forró pé de serra, samba de raiz e DJ até o fim. Ninguém fica sentado por muito tempo — e ninguém quer ficar.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              className="group relative overflow-hidden rounded-3xl bg-card p-8 shadow-soft ring-1 ring-border/60 transition-all hover:-translate-y-1 hover:shadow-elegant lg:col-span-5"
+            >
+              <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-accent/20 blur-3xl" />
+              <div className="relative">
+                <span className="text-xs uppercase tracking-[0.25em] text-primary">
+                  No ar
+                </span>
+                <h3 className="mt-3 font-display text-2xl leading-tight md:text-3xl">
+                  Cheiro de milho na fogueira, riso de criança ao longe.
+                </h3>
+                <p className="mt-4 text-base text-muted-foreground">
+                  Pamonha quentinha, quentão na caneca, paçoca derretendo na boca. A memória de infância de toda família brasileira, servida em mesa comprida.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              className="group relative overflow-hidden rounded-3xl bg-card p-8 shadow-soft ring-1 ring-border/60 transition-all hover:-translate-y-1 hover:shadow-elegant lg:col-span-5"
+            >
+              <div className="absolute -left-10 -bottom-10 h-32 w-32 rounded-full bg-primary/15 blur-3xl" />
+              <div className="relative">
+                <span className="text-xs uppercase tracking-[0.25em] text-primary">
+                  Para os pequenos
+                </span>
+                <h3 className="mt-3 font-display text-2xl leading-tight md:text-3xl">
+                  Quadrilha, pescaria e olhinhos brilhando.
+                </h3>
+                <p className="mt-4 text-base text-muted-foreground">
+                  Espaço kids cuidado para os pais relaxarem. As crianças voltam para casa cansadas, felizes — e querendo voltar no ano que vem.
+                </p>
+              </div>
+            </motion.div>
           </div>
+
+          <motion.p
+            {...fadeUp}
+            className="mx-auto mt-16 max-w-2xl text-center text-lg italic text-muted-foreground md:text-xl"
+          >
+            "No fim da noite, ninguém quer ir embora. E é justamente por isso que vale tanto a pena estar lá."
+          </motion.p>
         </div>
       </section>
 
