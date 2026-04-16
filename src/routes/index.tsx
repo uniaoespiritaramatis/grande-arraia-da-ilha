@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
+import { Users, Package, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { Countdown } from "@/components/Countdown";
-import { Gallery } from "@/components/Gallery";
 import { Prizes } from "@/components/Prizes";
 import { WHATSAPP_URL } from "@/lib/constants";
 import heroImg from "@/assets/hero-arraia.jpg";
@@ -224,8 +224,59 @@ function Index() {
         </motion.div>
       </section>
 
-      {/* GALERIA 2025 */}
-      <Gallery />
+      {/* IMPACTO 2025 */}
+      <section className="bg-secondary/40 px-6 py-24 md:px-10 md:py-32">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-14 max-w-2xl">
+            <motion.span
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.6 }}
+              className="text-xs uppercase tracking-[0.25em] text-primary"
+            >
+              Edição 2025 · Retrospectiva
+            </motion.span>
+            <motion.h2
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.7, delay: 0.05 }}
+              className="mt-5 text-3xl md:text-5xl"
+            >
+              Números que transformam{" "}
+              <span className="text-muted-foreground">vidas.</span>
+            </motion.h2>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            {[
+              { number: "700+", label: "Pessoas presentes", desc: "Uma noite de celebração e solidariedade", Icon: Users },
+              { number: "450kg", label: "Alimentos arrecadados", desc: "Doações que fizeram a diferença", Icon: Package },
+              { number: "200+", label: "Famílias beneficiadas", desc: "Apoio direto a quem mais precisa", Icon: Heart },
+            ].map((item, i) => (
+              <motion.div
+                key={item.label}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.6, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                className="group relative overflow-hidden rounded-2xl bg-card p-8 shadow-soft ring-1 ring-border/60 transition-all hover:-translate-y-1 hover:shadow-elegant"
+              >
+                <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-accent/15 blur-2xl transition-opacity group-hover:opacity-150" />
+                <div className="relative">
+                  <item.Icon className="h-8 w-8 text-primary" strokeWidth={1.5} />
+                  <div className="mt-6 font-display text-5xl text-foreground md:text-6xl">
+                    {item.number}
+                  </div>
+                  <h3 className="mt-2 text-lg font-medium">{item.label}</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* PRÊMIOS DA RIFA 2026 */}
       <Prizes />
