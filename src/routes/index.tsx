@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
+import { Countdown } from "@/components/Countdown";
 import { WHATSAPP_URL } from "@/lib/constants";
 import heroImg from "@/assets/hero-arraia.jpg";
 import comidasImg from "@/assets/comidas.jpg";
@@ -80,8 +81,12 @@ function Index() {
                 transition={{ duration: 0.8, delay: 0.35 }}
                 className="mt-6 max-w-xl text-lg text-background/85 md:text-xl"
               >
-                Tradição, alegria e solidariedade em uma experiência única.
+                Tradição, alegria e solidariedade em uma experiência única.{" "}
+                <span className="text-background">06 de junho de 2026.</span>
               </motion.p>
+              <div className="mt-8">
+                <Countdown />
+              </div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
