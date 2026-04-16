@@ -15,11 +15,12 @@ function getTimeLeft() {
 }
 
 export function Countdown() {
-  const [time, setTime] = useState(getTimeLeft);
+  const [time, setTime] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
+    setTime(getTimeLeft());
     const id = setInterval(() => setTime(getTimeLeft()), 1000);
     return () => clearInterval(id);
   }, []);
