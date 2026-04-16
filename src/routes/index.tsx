@@ -75,8 +75,9 @@ function Index() {
                 transition={{ duration: 0.8, delay: 0.35 }}
                 className="mt-6 max-w-xl text-lg text-background/85 md:text-xl"
               >
-                Tradição, alegria e solidariedade em uma experiência única.{" "}
-                <span className="text-background">06 de junho de 2026.</span>
+                Tradição, alegria e solidariedade em uma experiência única.
+                <br /><br />
+                <span className="text-background">06 de junho de 2026 na Portuguesa da Ilha (Associação Atlética Portuguesa).</span>
               </motion.p>
               <div className="mt-8">
                 <Countdown />
