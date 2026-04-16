@@ -185,8 +185,8 @@ function Index() {
             className="relative mt-20 overflow-hidden rounded-[2rem] shadow-elegant"
           >
             <img
-              src={musicaImg}
-              alt="Quadrilha rodopiando sob luzes amarelas e bandeirinhas no Arraiá da Ilha"
+              src={eventoQuadrilhaFantasia}
+              alt="Quadrilha em fantasias coloridas dançando no Arraiá da Ilha 2025"
               loading="lazy"
               className="h-[70vh] min-h-[520px] w-full object-cover"
             />
@@ -201,51 +201,69 @@ function Index() {
             </div>
           </motion.div>
 
-          {/* Momentos como linha do tempo */}
-          <div className="mt-24 grid gap-x-12 gap-y-16 md:grid-cols-2 lg:gap-x-20">
+          {/* Momentos como linha do tempo — com fotos reais */}
+          <div className="mt-24 grid gap-x-10 gap-y-20 md:grid-cols-2 lg:gap-x-16">
             {[
               {
                 hora: "19h30",
                 titulo: "O cheiro chega antes da gente.",
                 texto:
                   "Milho assando, canela no quentão, alho dourando na barraca do pastel. Você ainda nem entrou direito e já está com fome.",
+                img: eventoBarracas,
+                alt: "Barracas decoradas com bandeirinhas no Arraiá da Ilha",
               },
               {
                 hora: "21h00",
-                titulo: "As crianças somem — e tá tudo bem.",
+                titulo: "A mesa se enche, a conversa também.",
                 texto:
-                  "Pescaria, quadrilha mirim, pintura de rosto. Elas voltam suadas, com algodão doce no cabelo, perguntando se podem ficar mais um pouquinho.",
+                  "Famílias inteiras se sentam juntas, gente que não se vê o ano todo se reencontra, e o salão da Portuguesa vira sala de estar de todo mundo.",
+                img: eventoMesas,
+                alt: "Famílias reunidas nas mesas do salão durante o Arraiá",
               },
               {
                 hora: "22h15",
                 titulo: "Alguém grita: 'Anarriê!'",
                 texto:
                   "E de repente todo mundo vira par de alguém. Quem disse que não sabia dançar, dança. Quem jurou que ia só assistir, está no meio da roda.",
+                img: eventoQuadrilha,
+                alt: "Pessoas dançando quadrilha vestidas com camisas da equipe",
               },
               {
-                hora: "00h40",
-                titulo: "Ninguém quer ir embora.",
+                hora: "23h30",
+                titulo: "A banda puxa o samba — e o salão treme.",
                 texto:
-                  "A fogueira virou brasa, o DJ emendou um samba, e tem gente combinando de se encontrar de novo no ano que vem. Sempre tem.",
+                  "Cavaquinho, pandeiro, voz que enche o ginásio. A música ao vivo é coisa séria aqui, e ninguém fica parado por muito tempo.",
+                img: eventoBanda,
+                alt: "Banda tocando ao vivo no palco do Arraiá da Ilha",
               },
             ].map((m, i) => (
               <motion.div
                 key={m.hora}
-                initial={{ opacity: 0, y: 24 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.7, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                className="border-l border-primary/30 pl-6"
+                transition={{ duration: 0.8, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                className="group"
               >
-                <div className="font-display text-sm tracking-[0.3em] text-primary">
-                  {m.hora}
+                <div className="overflow-hidden rounded-2xl shadow-soft">
+                  <img
+                    src={m.img}
+                    alt={m.alt}
+                    loading="lazy"
+                    className="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
+                  />
                 </div>
-                <h3 className="mt-3 font-display text-2xl leading-tight text-foreground md:text-3xl">
-                  {m.titulo}
-                </h3>
-                <p className="mt-3 text-base leading-relaxed text-muted-foreground md:text-lg">
-                  {m.texto}
-                </p>
+                <div className="mt-6 border-l-2 border-primary/40 pl-5">
+                  <div className="font-display text-xs tracking-[0.3em] text-primary">
+                    {m.hora}
+                  </div>
+                  <h3 className="mt-2 font-display text-2xl leading-tight text-foreground md:text-3xl">
+                    {m.titulo}
+                  </h3>
+                  <p className="mt-3 text-base leading-relaxed text-muted-foreground md:text-lg">
+                    {m.texto}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>
