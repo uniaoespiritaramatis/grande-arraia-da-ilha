@@ -7,9 +7,15 @@ import { Countdown } from "@/components/Countdown";
 import { Prizes } from "@/components/Prizes";
 import { WHATSAPP_URL } from "@/lib/constants";
 import heroImg from "@/assets/hero-arraia.jpg";
-import comidasImg from "@/assets/comidas.jpg";
-import musicaImg from "@/assets/musica.jpg";
-import rifaImg from "@/assets/rifa.jpg";
+import eventoQuadrilha from "@/assets/evento-quadrilha.jpg";
+import eventoBanda from "@/assets/evento-banda.jpg";
+import eventoCantor from "@/assets/evento-cantor.jpg";
+import eventoBarracas from "@/assets/evento-barracas.jpg";
+import eventoMesas from "@/assets/evento-mesas.jpg";
+import eventoSalao from "@/assets/evento-salao.jpg";
+import eventoDanca1 from "@/assets/evento-danca1.jpg";
+import eventoDanca2 from "@/assets/evento-danca2.jpg";
+import eventoQuadrilhaFantasia from "@/assets/evento-quadrilha-fantasia.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
