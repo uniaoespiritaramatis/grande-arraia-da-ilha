@@ -147,33 +147,15 @@ function Index() {
       <section className="relative bg-secondary/40 px-6 py-24 md:px-10 md:py-32">
         <div className="mx-auto max-w-6xl">
           {/* Abertura editorial */}
-          <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-            <motion.div {...fadeUp} className="lg:col-span-5">
-              <span className="text-xs uppercase tracking-[0.25em] text-primary">
-                A noite
-              </span>
-              <h2 className="mt-5 font-display text-4xl leading-[1.05] md:text-6xl">
-                Não dá pra<br />
-                <em className="not-italic text-primary">explicar.</em>
-                <br />
-                Só vivendo.
-              </h2>
-            </motion.div>
-
-            <motion.div
-              {...fadeUp}
-              className="space-y-6 text-lg leading-relaxed text-muted-foreground md:text-xl lg:col-span-7 lg:pt-4"
-            >
-              <p>
-                Tem um momento, lá pelas dez da noite, em que a sanfona puxa um
-                xote e <span className="text-foreground">você percebe que está dançando com gente que acabou de conhecer</span> — e que, no fim das contas, parece amigo de infância.
-              </p>
-              <p>
-                É isso que a gente não consegue colocar no cartaz. A festa é
-                feita de pequenas coisas que acontecem ao mesmo tempo, e que só
-                fazem sentido juntas.
-              </p>
-            </motion.div>
+          <div className="max-w-3xl">
+            <motion.span {...fadeUp} className="text-xs uppercase tracking-[0.25em] text-primary">
+              A noite
+            </motion.span>
+            <motion.h2 {...fadeUp} className="mt-5 font-display text-4xl leading-[1.05] md:text-6xl">
+              Não dá pra <em className="not-italic text-primary">explicar.</em>
+              <br />
+              Só vivendo.
+            </motion.h2>
           </div>
 
           {/* Imagem imersiva com momentos sobrepostos */}
