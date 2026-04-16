@@ -77,9 +77,7 @@ function Index() {
               >
                 Tradição, alegria e solidariedade em uma experiência única.
                 <br /><br />
-                <span className="text-background">06 de junho de 2026 na Portuguesa da Ilha</span>
-                <br />
-                <span className="text-background">(Associação Atlética Portuguesa).</span>
+                <span className="text-background">6 de junho de 2026 na Associação Atlética Portuguesa.</span>
               </motion.p>
               <div className="mt-8">
                 <Countdown />
