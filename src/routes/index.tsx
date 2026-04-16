@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { Countdown } from "@/components/Countdown";
+import { Gallery } from "@/components/Gallery";
+import { Prizes } from "@/components/Prizes";
 import { WHATSAPP_URL } from "@/lib/constants";
 import heroImg from "@/assets/hero-arraia.jpg";
 import comidasImg from "@/assets/comidas.jpg";
@@ -222,43 +224,11 @@ function Index() {
         </motion.div>
       </section>
 
-      {/* RIFA */}
-      <section className="bg-secondary/40 px-6 py-24 md:px-10 md:py-32">
-        <div className="mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-2">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="overflow-hidden rounded-2xl shadow-soft"
-          >
-            <img
-              src={rifaImg}
-              alt="Rifa beneficente"
-              loading="lazy"
-              className="aspect-[5/4] w-full object-cover"
-            />
-          </motion.div>
-          <div>
-            <motion.span {...fadeUp} className="text-xs uppercase tracking-[0.25em] text-primary">
-              Rifa beneficente
-            </motion.span>
-            <motion.h2 {...fadeUp} className="mt-5 text-3xl md:text-5xl">
-              Um bilhete. Muitas vidas transformadas.
-            </motion.h2>
-            <motion.p {...fadeUp} className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Participe da nossa rifa solidária e concorra a prêmios especiais. Cada bilhete contribui diretamente com os projetos sociais da União Espírita Ramatis — simples, transparente e do coração.
-            </motion.p>
-            <motion.div {...fadeUp} className="mt-8">
-              <Button asChild size="lg" variant="outline" className="rounded-full">
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                  Quero participar
-                </a>
-              </Button>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      {/* GALERIA 2025 */}
+      <Gallery />
+
+      {/* PRÊMIOS DA RIFA 2026 */}
+      <Prizes />
 
       {/* CTA FINAL */}
       <section className="px-6 py-24 md:px-10 md:py-32">
