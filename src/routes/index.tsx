@@ -7,6 +7,7 @@ import { Countdown } from "@/components/Countdown";
 import { Prizes } from "@/components/Prizes";
 import { WHATSAPP_URL } from "@/lib/constants";
 import heroImg from "@/assets/hero-arraia.jpg";
+import logoArraia from "@/assets/logo-arraia.jpg";
 import eventoQuadrilha from "@/assets/evento-quadrilha.jpg";
 import eventoBanda from "@/assets/evento-banda.jpg";
 import eventoCantor from "@/assets/evento-cantor.jpg";
@@ -66,6 +67,14 @@ function Index() {
 
           <div className="flex flex-1 items-center">
             <div className="max-w-3xl">
+              <motion.img
+                src={logoArraia}
+                alt="Logo Grande Arraiá da Ilha 2026"
+                initial={{ opacity: 0, scale: 0.9, y: 10 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+                className="mb-6 h-32 w-32 rounded-2xl object-cover shadow-elegant ring-1 ring-background/20 md:h-40 md:w-40"
+              />
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -415,7 +424,7 @@ function Index() {
       <footer className="border-t border-border px-6 py-10 text-center text-sm text-muted-foreground md:px-10">
         <p className="font-display text-base text-foreground">Grande Arraiá da Ilha</p>
         <p className="mt-2">
-          Realização: União Espírita Ramatis · Ilha do Governador, Rio de Janeiro
+          Realização: União Espírita Ramatis
         </p>
       </footer>
 
