@@ -33,7 +33,7 @@
   --color-whatsapp: var(--whatsapp);
   --color-whatsapp-foreground: var(--whatsapp-foreground);
 
-  --font-display: "Fraunces", Georgia, serif;
+  --font-display: "DM Serif Display", Georgia, serif;
   --font-sans: "Inter", system-ui, sans-serif;
 
   --shadow-soft: 0 10px 40px -12px color-mix(in oklab, var(--primary) 18%, transparent);

@@ -193,52 +193,45 @@ function Index() {
             <div className="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/60 to-foreground/10" />
             <div className="absolute inset-x-0 bottom-0 p-8 text-background md:p-14">
               <p className="max-w-2xl font-display text-2xl leading-[1.2] text-background md:text-4xl">
-                "Acho que faz três horas que a gente tá aqui. Não parece."
-              </p>
-              <p className="mt-3 text-sm text-background/70 md:text-base">
-                — frase mais ouvida no Arraiá de 2025
+                Alegria é a marca. O ambiente é acolhedor, familiar. E a solidariedade está presente em cada detalhe.
               </p>
             </div>
           </motion.div>
 
-          {/* Momentos como linha do tempo — com fotos reais */}
+          {/* Momentos reais — grid */}
           <div className="mt-24 grid gap-x-10 gap-y-20 md:grid-cols-2 lg:gap-x-16">
             {[
               {
-                hora: "19h30",
-                titulo: "O cheiro chega antes da gente.",
+                titulo: "A mesa se enche",
                 texto:
-                  "Milho assando, canela no quentão, alho dourando na barraca do pastel. Você ainda nem entrou direito e já está com fome.",
+                  "Famílias e amigos se reúnem, conversas se cruzam e o ambiente ganha vida. O salão vira ponto de encontro.",
                 img: eventoBarracas,
                 alt: "Barracas decoradas com bandeirinhas no Arraiá da Ilha",
               },
               {
-                hora: "21h00",
-                titulo: "A mesa se enche, a conversa também.",
+                titulo: "A roda se forma",
                 texto:
-                  "Famílias inteiras se sentam juntas, gente que não se vê o ano todo se reencontra, e o salão da Portuguesa vira sala de estar de todo mundo.",
+                  "Quando a música começa, ninguém fica só assistindo. Quem dizia que não sabia dançar, já está no meio da roda.",
                 img: eventoMesas,
                 alt: "Famílias reunidas nas mesas do salão durante o Arraiá",
               },
               {
-                hora: "22h15",
-                titulo: "Alguém grita: 'Anarriê!'",
+                titulo: "O salão ganha ritmo",
                 texto:
-                  "E de repente todo mundo vira par de alguém. Quem disse que não sabia dançar, dança. Quem jurou que ia só assistir, está no meio da roda.",
+                  "A música ao vivo toma conta do espaço e puxa as pessoas. Aos poucos, todo mundo entra no clima.",
                 img: eventoQuadrilha,
                 alt: "Pessoas dançando quadrilha vestidas com camisas da equipe",
               },
               {
-                hora: "23h30",
-                titulo: "A banda puxa o samba — e o salão treme.",
+                titulo: "Todo mundo encontra seu lugar",
                 texto:
-                  "Cavaquinho, pandeiro, voz que enche o ginásio. A música ao vivo é coisa séria aqui, e ninguém fica parado por muito tempo.",
+                  "Crianças brincam, adultos conversam, grupos se formam. É um ambiente leve, onde cada um aproveita do seu jeito.",
                 img: eventoBanda,
                 alt: "Banda tocando ao vivo no palco do Arraiá da Ilha",
               },
             ].map((m, i) => (
               <motion.div
-                key={m.hora}
+                key={m.titulo}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
@@ -253,11 +246,8 @@ function Index() {
                     className="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
                   />
                 </div>
-                <div className="mt-6 border-l-2 border-primary/40 pl-5">
-                  <div className="font-display text-xs tracking-[0.3em] text-primary">
-                    {m.hora}
-                  </div>
-                  <h3 className="mt-2 font-display text-2xl leading-tight text-foreground md:text-3xl">
+                <div className="mt-6">
+                  <h3 className="font-display text-2xl leading-tight text-foreground md:text-3xl">
                     {m.titulo}
                   </h3>
                   <p className="mt-3 text-base leading-relaxed text-muted-foreground md:text-lg">
@@ -272,8 +262,8 @@ function Index() {
             {...fadeUp}
             className="mx-auto mt-24 max-w-3xl text-center font-display text-2xl leading-tight text-foreground md:text-3xl"
           >
-            E o melhor: cada gole, cada prato, cada rifa{" "}
-            <span className="text-primary">vira ajuda real</span> pra alguém que precisa.
+            E o melhor: cada participação se transforma em{" "}
+            <span className="text-primary">ajuda real</span> para quem precisa.
           </motion.p>
         </div>
       </section>
