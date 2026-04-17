@@ -1,2 +1,2 @@
 export const WHATSAPP_URL =
-  "https://wa.me/5521995501269?text=Olá!%20Quero%20garantir%20uma%20mesa%20para%20o%20Grande%20Arraiá%20da%20Ilha.%20Pode%20me%20passar%20mais%20informações%3F";
+  "https://wa.me/5521995501269?text=Ol%C3%A1!%20Quero%20participar%20da%20a%C3%A7%C3%A3o%20entre%20amigos.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F";
