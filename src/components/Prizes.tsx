@@ -101,11 +101,8 @@ export function Prizes() {
               </li>
             ))}
           </ul>
-          <div className="mt-8 flex flex-col items-start gap-4 border-t border-border/60 pt-8 sm:flex-row sm:items-center sm:justify-between">
-            <p className="max-w-md text-muted-foreground">
-              Cada bilhete vai diretamente para os projetos sociais da União Espírita Ramatis.
-            </p>
-            <Button asChild size="lg" className="rounded-full shadow-elegant">
+          <div className="mt-8 flex justify-center border-t border-border/60 pt-8">
+            <Button asChild size="lg" className="h-14 rounded-full px-12 text-lg shadow-elegant">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 Fale conosco
               </a>

@@ -50,19 +50,26 @@ function Index() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex items-center justify-between"
+            className="flex items-start justify-between"
           >
             <div className="font-display text-lg text-background/90 tracking-wide">
               Grande Arraiá da Ilha
             </div>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden text-sm text-background/85 underline-offset-4 hover:text-background hover:underline md:block"
-            >
-              Falar no WhatsApp
-            </a>
+            <div className="flex flex-col items-end gap-3">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden text-sm text-background/85 underline-offset-4 hover:text-background hover:underline md:block"
+              >
+                Falar no WhatsApp
+              </a>
+              <img
+                src={logoArraia}
+                alt="Logo Grande Arraiá da Ilha 2026"
+                className="hidden h-16 w-16 object-contain drop-shadow-lg md:block"
+              />
+            </div>
           </motion.div>
 
           <div className="flex flex-1 items-center">
