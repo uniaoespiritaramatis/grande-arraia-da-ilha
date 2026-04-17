@@ -100,7 +100,7 @@ export function Prizes() {
                 {p}
               </li>
             ))}
-            <li className="rounded-full bg-primary px-6 py-3 text-base font-medium text-primary-foreground md:text-lg">
+            <li className="rounded-full border border-border bg-background px-6 py-3 text-base font-medium text-foreground/90 md:text-lg">
               e muito mais!
             </li>
           </ul>
