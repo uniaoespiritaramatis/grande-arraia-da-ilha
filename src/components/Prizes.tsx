@@ -91,15 +91,18 @@ export function Prizes() {
             <Sparkles className="h-4 w-4" strokeWidth={1.5} />
             Prêmios extras
           </div>
-          <ul className="mt-5 flex flex-wrap gap-2.5">
+          <ul className="mt-6 flex flex-wrap gap-3">
             {extras.map((p) => (
               <li
                 key={p}
-                className="rounded-full border border-border bg-background px-4 py-2 text-sm text-foreground/80"
+                className="rounded-full border border-border bg-background px-6 py-3 text-base text-foreground/90 md:text-lg"
               >
                 {p}
               </li>
             ))}
+            <li className="rounded-full bg-primary px-6 py-3 text-base font-medium text-primary-foreground md:text-lg">
+              e muito mais!
+            </li>
           </ul>
           <div className="mt-8 flex justify-center border-t border-border/60 pt-8">
             <Button asChild size="lg" className="h-14 rounded-full px-12 text-lg shadow-elegant">

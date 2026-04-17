@@ -7,7 +7,7 @@ import { Countdown } from "@/components/Countdown";
 import { Prizes } from "@/components/Prizes";
 import { WHATSAPP_URL } from "@/lib/constants";
 import heroImg from "@/assets/hero-arraia.jpg";
-import logoArraia from "@/assets/logo-arraia.png";
+
 import eventoQuadrilha from "@/assets/evento-quadrilha.jpg";
 import eventoBanda from "@/assets/evento-banda.jpg";
 import eventoCantor from "@/assets/evento-cantor.jpg";
@@ -50,87 +50,66 @@ function Index() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex items-start justify-between"
+            className="flex items-center justify-between"
           >
             <div className="font-display text-lg text-background/90 tracking-wide">
               Grande Arraiá da Ilha
             </div>
-            <div className="flex flex-col items-end gap-3">
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hidden text-sm text-background/85 underline-offset-4 hover:text-background hover:underline md:block"
-              >
-                Falar no WhatsApp
-              </a>
-              <img
-                src={logoArraia}
-                alt="Logo Grande Arraiá da Ilha 2026"
-                className="hidden h-16 w-16 object-contain drop-shadow-lg md:block"
-              />
-            </div>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden text-sm text-background/85 underline-offset-4 hover:text-background hover:underline md:block"
+            >
+              Falar no WhatsApp
+            </a>
           </motion.div>
 
           <div className="flex flex-1 items-center">
-            <div className="grid w-full items-center gap-10 md:grid-cols-[1.2fr_1fr] md:gap-12">
-              <div className="max-w-3xl">
-                <motion.h1
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  className="text-4xl leading-[1.05] text-background sm:text-5xl md:text-6xl lg:text-7xl"
-                >
-                  O MAIOR ARRAIÁ BENEFICENTE DA{" "}
-                  <em className="not-italic text-accent">ILHA DO GOVERNADOR</em>
-                </motion.h1>
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.35 }}
-                  className="mt-6 max-w-xl text-lg text-background/85 md:text-xl"
-                >
-                  Tradição, alegria e solidariedade em uma experiência única.
-                  <br /><br />
-                  <span className="text-background">6 de junho de 2026 na Associação Atlética Portuguesa.</span>
-                </motion.p>
-                <div className="mt-8">
-                  <Countdown />
-                </div>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.5 }}
-                  className="mt-10 flex flex-col gap-3 sm:flex-row"
-                >
-                  <Button asChild size="lg" className="h-12 rounded-full px-8 text-base shadow-elegant">
-                    <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                      Reservar mesa
-                    </a>
-                  </Button>
-                  <Button
-                    asChild
-                    size="lg"
-                    variant="outline"
-                    className="h-12 rounded-full border-background/40 bg-background/10 px-8 text-base text-background backdrop-blur hover:bg-background/20 hover:text-background"
-                  >
-                    <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                      Falar no WhatsApp
-                    </a>
-                  </Button>
-                </motion.div>
+            <div className="max-w-3xl">
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="text-4xl leading-[1.05] text-background sm:text-5xl md:text-6xl lg:text-7xl"
+              >
+                O MAIOR ARRAIÁ BENEFICENTE DA{" "}
+                <em className="not-italic text-accent">ILHA DO GOVERNADOR</em>
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.35 }}
+                className="mt-6 max-w-xl text-lg text-background/85 md:text-xl"
+              >
+                Tradição, alegria e solidariedade em uma experiência única.
+                <br /><br />
+                <span className="text-background">6 de junho de 2026 na Associação Atlética Portuguesa.</span>
+              </motion.p>
+              <div className="mt-8">
+                <Countdown />
               </div>
               <motion.div
-                initial={{ opacity: 0, scale: 0.9, y: 10 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-                className="hidden justify-center md:flex"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="mt-10 flex flex-col gap-3 sm:flex-row"
               >
-                <img
-                  src={logoArraia}
-                  alt="Logo Grande Arraiá da Ilha 2026"
-                  className="w-full max-w-md drop-shadow-2xl"
-                />
+                <Button asChild size="lg" className="h-12 rounded-full px-8 text-base shadow-elegant">
+                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                    Reservar mesa
+                  </a>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="h-12 rounded-full border-background/40 bg-background/10 px-8 text-base text-background backdrop-blur hover:bg-background/20 hover:text-background"
+                >
+                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                    Falar no WhatsApp
+                  </a>
+                </Button>
               </motion.div>
             </div>
           </div>
