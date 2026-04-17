@@ -55,21 +55,14 @@ function Index() {
             <div className="font-display text-lg text-background/90 tracking-wide">
               Grande Arraiá da Ilha
             </div>
-            <div className="flex flex-col items-end gap-3">
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hidden text-sm text-background/85 underline-offset-4 hover:text-background hover:underline md:block"
-              >
-                Falar no WhatsApp
-              </a>
-              <img
-                src={logoArraia}
-                alt="Logo Grande Arraiá da Ilha 2026"
-                className="hidden h-16 w-16 object-contain drop-shadow-lg md:block"
-              />
-            </div>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden text-sm text-background/85 underline-offset-4 hover:text-background hover:underline md:block"
+            >
+              Falar no WhatsApp
+            </a>
           </motion.div>
 
           <div className="flex flex-1 items-center">
