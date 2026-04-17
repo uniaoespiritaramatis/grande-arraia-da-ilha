@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { WHATSAPP_URL } from "@/lib/constants";
+import { WHATSAPP_URL_INFO } from "@/lib/constants";
 
 export function WhatsAppFloat() {
   return (
     <motion.a
-      href={WHATSAPP_URL}
+      href={WHATSAPP_URL_INFO}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Falar no WhatsApp"

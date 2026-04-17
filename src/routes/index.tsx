@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { Countdown } from "@/components/Countdown";
 import { Prizes } from "@/components/Prizes";
-import { WHATSAPP_URL } from "@/lib/constants";
+import { WHATSAPP_URL_INFO, WHATSAPP_URL_RESERVA } from "@/lib/constants";
 import heroImg from "@/assets/hero-arraia.jpg";
 
 import eventoQuadrilha from "@/assets/evento-quadrilha.jpg";
@@ -56,7 +56,7 @@ function Index() {
               Grande Arraiá da Ilha
             </div>
             <a
-              href={WHATSAPP_URL}
+              href={WHATSAPP_URL_INFO}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden text-sm text-background/85 underline-offset-4 hover:text-background hover:underline md:block"
@@ -96,7 +96,7 @@ function Index() {
                 className="mt-10 flex flex-col gap-3 sm:flex-row"
               >
                 <Button asChild size="lg" className="h-12 rounded-full px-8 text-base shadow-elegant">
-                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                  <a href={WHATSAPP_URL_RESERVA} target="_blank" rel="noopener noreferrer">
                     Reservar mesa
                   </a>
                 </Button>
@@ -106,7 +106,7 @@ function Index() {
                   variant="outline"
                   className="h-12 rounded-full border-background/40 bg-background/10 px-8 text-base text-background backdrop-blur hover:bg-background/20 hover:text-background"
                 >
-                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                  <a href={WHATSAPP_URL_INFO} target="_blank" rel="noopener noreferrer">
                     Falar no WhatsApp
                   </a>
                 </Button>
@@ -323,7 +323,7 @@ function Index() {
                 variant="secondary"
                 className="h-14 rounded-full px-10 text-base font-medium shadow-elegant"
               >
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                <a href={WHATSAPP_URL_RESERVA} target="_blank" rel="noopener noreferrer">
                   Reservar pelo WhatsApp
                 </a>
               </Button>
@@ -405,7 +405,7 @@ function Index() {
               size="lg"
               className="h-14 rounded-full px-10 text-base shadow-elegant"
             >
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+              <a href={WHATSAPP_URL_RESERVA} target="_blank" rel="noopener noreferrer">
                 Reservar minha mesa agora
               </a>
             </Button>

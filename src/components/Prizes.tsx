@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { WHATSAPP_URL } from "@/lib/constants";
+import { WHATSAPP_URL_ACAO } from "@/lib/constants";
 import premioIphone from "@/assets/premio-iphone.png";
 import premioTv from "@/assets/premio-tv.png";
 import premioCaixaSom from "@/assets/premio-caixa-som.png";
@@ -106,7 +106,7 @@ export function Prizes() {
           </ul>
           <div className="mt-8 flex justify-center border-t border-border/60 pt-8">
             <Button asChild size="lg" className="h-14 rounded-full px-12 text-lg shadow-elegant">
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+              <a href={WHATSAPP_URL_ACAO} target="_blank" rel="noopener noreferrer">
                 Fale conosco
               </a>
             </Button>
