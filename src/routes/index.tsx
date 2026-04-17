@@ -7,7 +7,7 @@ import { Countdown } from "@/components/Countdown";
 import { Prizes } from "@/components/Prizes";
 import { WHATSAPP_URL } from "@/lib/constants";
 import heroImg from "@/assets/hero-arraia.jpg";
-import logoArraia from "@/assets/logo-arraia.png";
+
 import eventoQuadrilha from "@/assets/evento-quadrilha.jpg";
 import eventoBanda from "@/assets/evento-banda.jpg";
 import eventoCantor from "@/assets/evento-cantor.jpg";
@@ -50,7 +50,7 @@ function Index() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex items-start justify-between"
+            className="flex items-center justify-between"
           >
             <div className="font-display text-lg text-background/90 tracking-wide">
               Grande Arraiá da Ilha
