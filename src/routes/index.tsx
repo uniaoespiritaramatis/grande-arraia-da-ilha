@@ -131,14 +131,14 @@ function Index() {
           </motion.h2>
           <motion.div {...fadeUp} className="mt-10 space-y-6 text-lg leading-relaxed text-muted-foreground md:text-xl">
             <p>
-              O <span className="text-foreground font-medium">Grande Arraiá da Ilha</span> é o maior arraiá beneficente da Ilha do Governador, unindo tradição, alegria e solidariedade em uma experiência única.
+              O <span className="text-foreground font-medium">Grande Arraiá da Ilha</span> reúne tradição, alegria e solidariedade em uma experiência única — e se consolida como o maior arraiá beneficente da Ilha do Governador.
             </p>
             <p>
-              Mais do que uma festa, é uma oportunidade de fazer o bem: arrecadamos alimentos, apoiamos famílias e fortalecemos diversas ações sociais.
+              Cada edição gera impacto real: arrecadamos alimentos, apoiamos famílias e fortalecemos ações sociais que fazem a diferença.
             </p>
             <p className="text-foreground">
-              Toda a renda arrecadada é integralmente destinada à manutenção dos projetos sociais da{" "}
-              <span className="font-medium">União Espírita Ramatis</span>.
+              Toda a renda é integralmente destinada à manutenção dos projetos sociais da{" "}
+              <span className="font-medium">Ramatis</span>.
             </p>
           </motion.div>
         </div>
