@@ -7,7 +7,7 @@ import { Countdown } from "@/components/Countdown";
 import { Prizes } from "@/components/Prizes";
 import { WHATSAPP_URL } from "@/lib/constants";
 import heroImg from "@/assets/hero-arraia.jpg";
-import logoArraia from "@/assets/logo-arraia.jpg";
+import logoArraia from "@/assets/logo-arraia.png";
 import eventoQuadrilha from "@/assets/evento-quadrilha.jpg";
 import eventoBanda from "@/assets/evento-banda.jpg";
 import eventoCantor from "@/assets/evento-cantor.jpg";

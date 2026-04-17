@@ -61,7 +61,7 @@
   --secondary-foreground: oklch(0.28 0.04 40);
 
   --muted: oklch(0.95 0.018 75);
-  --muted-foreground: oklch(0.48 0.025 50);
+  --muted-foreground: oklch(0 0 0);
 
   /* Accent: muted mustard */
   --accent: oklch(0.78 0.12 80);

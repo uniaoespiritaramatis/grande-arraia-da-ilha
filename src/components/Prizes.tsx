@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { WHATSAPP_URL } from "@/lib/constants";
-import premioIphone from "@/assets/premio-iphone.jpg";
-import premioTv from "@/assets/premio-tv.jpg";
-import premioCaixaSom from "@/assets/premio-caixa-som.jpg";
+import premioIphone from "@/assets/premio-iphone.png";
+import premioTv from "@/assets/premio-tv.png";
+import premioCaixaSom from "@/assets/premio-caixa-som.png";
 
 const main = [
   { place: "1º", prize: "iPhone", img: premioIphone, alt: "iPhone preto — 1º prêmio da ação entre amigos" },
