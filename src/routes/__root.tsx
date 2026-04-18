@@ -39,13 +39,11 @@ export const Route = createRootRoute({
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Grande Arraiá da Ilha — O maior arraiá beneficente da Ilha do Governador" },
       { name: "twitter:description", content: "Tradição, alegria e solidariedade em uma experiência única. Reserve sua mesa e ajude os projetos sociais da União Espírita Ramatis." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/fb12d6fa-90b0-45ea-9e54-dca23ddb0f12" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/fb12d6fa-90b0-45ea-9e54-dca23ddb0f12" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a07b08bc-8ab4-4e51-bdf6-df2e920dfca8/id-preview-b5ef075e--e811f62b-2fdd-40ca-adfe-37215a514c76.lovable.app-1776473558515.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a07b08bc-8ab4-4e51-bdf6-df2e920dfca8/id-preview-b5ef075e--e811f62b-2fdd-40ca-adfe-37215a514c76.lovable.app-1776473558515.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", type: "image/png", href: "/favicon.png" },
-      { rel: "apple-touch-icon", href: "/favicon.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
