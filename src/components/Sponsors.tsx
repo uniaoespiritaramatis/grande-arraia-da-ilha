@@ -76,14 +76,14 @@ export function Sponsors() {
 
         <div className="space-y-16">
           <div>
-            <h3 className="mb-8 text-center text-xs uppercase tracking-[0.3em] text-primary">
+            <h3 className="mb-8 text-center text-base uppercase tracking-[0.3em] text-primary md:text-lg">
               Apoio
             </h3>
             <LogoGrid items={apoio} />
           </div>
 
           <div>
-            <h3 className="mb-8 text-center text-xs uppercase tracking-[0.3em] text-primary">
+            <h3 className="mb-8 text-center text-base uppercase tracking-[0.3em] text-primary md:text-lg">
               Parceiros
             </h3>
             <LogoGrid items={parceiros} />
