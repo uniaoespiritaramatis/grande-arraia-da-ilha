@@ -39,6 +39,8 @@ export const Route = createRootRoute({
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Grande Arraiá da Ilha — O maior arraiá beneficente da Ilha do Governador" },
       { name: "twitter:description", content: "Tradição, alegria e solidariedade em uma experiência única. Reserve sua mesa e ajude os projetos sociais da União Espírita Ramatis." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/fb12d6fa-90b0-45ea-9e54-dca23ddb0f12" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/fb12d6fa-90b0-45ea-9e54-dca23ddb0f12" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
