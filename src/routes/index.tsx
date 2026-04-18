@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { Countdown } from "@/components/Countdown";
 import { Prizes } from "@/components/Prizes";
+import { Sponsors } from "@/components/Sponsors";
 import { WHATSAPP_URL_INFO, WHATSAPP_URL_RESERVA } from "@/lib/constants";
 import heroImg from "@/assets/hero-arraia.jpg";
 
@@ -388,6 +389,9 @@ function Index() {
 
       {/* PRÊMIOS DA RIFA 2026 */}
       <Prizes />
+
+      {/* APOIO E PARCEIROS */}
+      <Sponsors />
 
       {/* CTA FINAL */}
       <section className="px-6 py-24 md:px-10 md:py-32">
