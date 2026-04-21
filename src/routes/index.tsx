@@ -72,7 +72,7 @@ function Index() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="mb-5 ml-[-2px] inline-flex items-center gap-2 rounded-full border border-background/30 bg-background/10 px-3 py-1.5 text-xs uppercase tracking-[0.2em] text-background/90 backdrop-blur"
+                className="mb-5 -ml-3 inline-flex items-center gap-2 rounded-full border border-background/30 bg-background/10 px-3 py-1.5 text-xs uppercase tracking-[0.2em] text-background/90 backdrop-blur"
               >
                 Realização: Ramatis
               </motion.div>
