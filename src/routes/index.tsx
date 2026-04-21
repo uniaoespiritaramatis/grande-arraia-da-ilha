@@ -46,7 +46,7 @@ function Index() {
           className="absolute inset-0"
           style={{ background: "var(--gradient-hero-overlay)" }}
         />
-        <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col px-6 py-10 md:px-10">
+        <div className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-6xl flex-col px-6 py-10 md:px-10">
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -67,12 +67,12 @@ function Index() {
           </motion.div>
 
           <div className="flex flex-1 items-center">
-            <div className="max-w-3xl">
+            <div className="w-full max-w-3xl">
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="mb-5 inline-flex items-center gap-2 rounded-full border border-background/30 bg-background/10 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-background/90 backdrop-blur"
+                className="mb-5 ml-[-2px] inline-flex items-center gap-2 rounded-full border border-background/30 bg-background/10 px-3 py-1.5 text-xs uppercase tracking-[0.2em] text-background/90 backdrop-blur"
               >
                 Realização: Ramatis
               </motion.div>
