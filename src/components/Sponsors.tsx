@@ -8,6 +8,8 @@ import jaya from "@/assets/sponsors/jaya-yoga.jpeg";
 import ilhaCarioca from "@/assets/sponsors/ilha-carioca.jpg";
 import brazuca from "@/assets/sponsors/brazuca.jpg";
 import crepeCevada from "@/assets/sponsors/crepe-cevada.jpg";
+import gaiolaDaIlha from "@/assets/sponsors/gaiola-da-ilha.png";
+import djBruno from "@/assets/sponsors/dj-bruno.jpeg";
 
 const apoio = [
   { name: "SubPrefeitura das Ilhas", img: subprefeitura },
@@ -22,6 +24,8 @@ const parceiros = [
   { name: "Ilha Carioca", img: ilhaCarioca },
   { name: "Brazuca Gastrobar", img: brazuca },
   { name: "Crepe & Cevada Restaurante", img: crepeCevada },
+  { name: "Gaiola da Ilha Bar e Restaurante", img: gaiolaDaIlha },
+  { name: "DJ Bruno", img: djBruno },
 ];
 
 function LogoGrid({ items }: { items: { name: string; img: string }[] }) {
