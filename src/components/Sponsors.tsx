@@ -9,7 +9,7 @@ import ilhaCarioca from "@/assets/sponsors/ilha-carioca.jpg";
 import brazuca from "@/assets/sponsors/brazuca.jpg";
 import crepeCevada from "@/assets/sponsors/crepe-cevada.jpg";
 import gaiolaDaIlha from "@/assets/sponsors/gaiola-da-ilha.png";
-import djBruno from "@/assets/sponsors/dj-bruno.jpeg";
+import djBruno from "@/assets/sponsors/dj-bruno.png";
 
 const apoio = [
   { name: "SubPrefeitura das Ilhas", img: subprefeitura },
