@@ -13,6 +13,7 @@ import djBruno from "@/assets/sponsors/dj-bruno.png";
 import pigProvedor from "@/assets/sponsors/pig-provedor.png";
 import espacoYa from "@/assets/sponsors/espaco-ya.jpg";
 import spaCatXexeu from "@/assets/sponsors/spa-cat-xexeu.png";
+import ilhaNatural from "@/assets/sponsors/ilha-natural.png";
 
 const apoio = [
   { name: "SubPrefeitura das Ilhas", img: subprefeitura },
@@ -32,6 +33,7 @@ const parceiros = [
   { name: "PIG Provedor", img: pigProvedor },
   { name: "Espaço YA Multimarcas", img: espacoYa },
   { name: "Spa Cat Xexeu", img: spaCatXexeu },
+  { name: "Ilha Natural", img: ilhaNatural },
 ];
 
 function LogoGrid({ items }: { items: { name: string; img: string }[] }) {
