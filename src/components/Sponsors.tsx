@@ -14,6 +14,12 @@ import pigProvedor from "@/assets/sponsors/pig-provedor.png";
 import espacoYa from "@/assets/sponsors/espaco-ya.jpg";
 import spaCatXexeu from "@/assets/sponsors/spa-cat-xexeu.png";
 import ilhaNatural from "@/assets/sponsors/ilha-natural.png";
+import ilhaGovernadorNoticias from "@/assets/sponsors/ilha-governador-noticias.jpg";
+import seturilha from "@/assets/sponsors/seturilha.jpeg";
+import culturaInglesa from "@/assets/sponsors/cultura-inglesa.jpeg";
+import catita from "@/assets/sponsors/catita.jpeg";
+import diarioInsulano from "@/assets/sponsors/diario-insulano.jpeg";
+import circoDosSonhos from "@/assets/sponsors/circo-dos-sonhos.jpg";
 
 const apoio = [
   { name: "SubPrefeitura das Ilhas", img: subprefeitura },
@@ -34,6 +40,12 @@ const parceiros = [
   { name: "Espaço YA Multimarcas", img: espacoYa },
   { name: "Spa Cat Xexeu", img: spaCatXexeu },
   { name: "Ilha Natural", img: ilhaNatural },
+  { name: "Ilha do Governador Notícias", img: ilhaGovernadorNoticias },
+  { name: "Seturilha", img: seturilha },
+  { name: "Cultura Inglesa", img: culturaInglesa },
+  { name: "Catita Geleia Artesanal", img: catita },
+  { name: "Diário Insulano", img: diarioInsulano },
+  { name: "Circo dos Sonhos", img: circoDosSonhos },
 ];
 
 function LogoGrid({ items }: { items: { name: string; img: string }[] }) {
