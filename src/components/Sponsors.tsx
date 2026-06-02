@@ -20,6 +20,7 @@ import culturaInglesa from "@/assets/sponsors/cultura-inglesa.jpeg";
 import catita from "@/assets/sponsors/catita.jpeg";
 import diarioInsulano from "@/assets/sponsors/diario-insulano.jpeg";
 import circoDosSonhos from "@/assets/sponsors/circo-dos-sonhos.jpg";
+import viacaoIdeal from "@/assets/sponsors/viacao-ideal.jpg";
 
 const apoio = [
   { name: "SubPrefeitura das Ilhas", img: subprefeitura },
@@ -46,6 +47,7 @@ const parceiros = [
   { name: "Catita Geleia Artesanal", img: catita },
   { name: "Diário Insulano", img: diarioInsulano },
   { name: "Circo dos Sonhos", img: circoDosSonhos },
+  { name: "Viação Ideal", img: viacaoIdeal },
 ];
 
 function LogoGrid({ items }: { items: { name: string; img: string }[] }) {
